@@ -6,16 +6,16 @@ ACTION stakemorecpu::transfer(const name from, const name to, const asset quanti
     return;
   }
   // only handle EOS transfers, ignore anything else
-  if(quantity.symbol != EOS_symbol) {
+  if(quantity.symbol != core_symbol) {
     return;
   }
   
   eosio_assert(quantity.is_valid(), "Are you trying to corrupt me?");
   eosio_assert(quantity.amount > 0, "Amount must be > 0");
   
-  const asset fee{quantity.amount/100, EOS_symbol};
+  const asset fee{quantity.amount/100, core_symbol};
   const auto ram_replace_amount = buyrambytes(450);
-  const asset stake_net{0, EOS_symbol};
+  const asset stake_net{0, core_symbol};
   const asset stake_cpu = quantity - fee - ram_replace_amount;
   
   action(
