@@ -9,3 +9,5 @@ This contract is deployed on the EOS mainnet on the account ```stakemorecpu```. 
 You can make a withdrawal from an exchange and unlock your account by staking more CPU.
 
 For example, if your account is ```helpimlocked```, make a withdrawal of ```10.0000 EOS``` from an exchange to ```stakemorecpu``` and specify ```helpimlocked``` as memo. It's important to give the correct memo as the transfer will be rejected otherwise.
+
+There is customer support rendered in the [EOS Account Creator Telegram Group](https://t.me/eos_account_creator), if you have a question or problem, please join and reach out. In order to recoup the deployment costs, there is currently a fee of 1% being charged for the usage.
